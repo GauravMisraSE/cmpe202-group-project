@@ -8,3 +8,5 @@ Project Team 20 - CodeMonks
 4. [Sushant Vairagade](https://github.com/sjsu-sushant)
 5. [Saurabh Gedam](https://github.com/saurabhgedam)
 
+#Directories
+1. Doc - Documents
