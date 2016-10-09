@@ -12,6 +12,12 @@ Project Team 20 - CodeMonks
 #Goal
 To build a multi player game using greenfoot or processing tool, to teach kids different programming language consructs.
 
+#Name of the Game
+Pokemon Thirst
+
+#Storyline
+Crazy for pokemons ? We have got a bunch of them scattered all across the field. Go catch 'em ! Develop skills and moves to protect yourself from the hurdles. Can you survive enough to catch few [ pokemons ] ? Lets See ! 
+
 #Release History
 1. Version 1.0 - Under Development 
 
