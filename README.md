@@ -22,8 +22,8 @@ Crazy for pokemons ? We have got a bunch of them scattered all across the field.
 1. Version 1.0 - Under Development
 
 #Branch Details
-Branch 1 [master] - all the final code commits and other updates
-Branch 2 [development] - regular intermediate/WIP code/ files commits 
+1. Branch 1 [master] - all the final code commits and other updates
+2. Branch 2 [development] - regular intermediate/WIP code/ files commits 
 
 #Study References
 1. [Teaching your kids how to write computer programs](http://marshallbrain.com/kids-programming.htm)
