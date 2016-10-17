@@ -11,6 +11,7 @@ Project Team 20 - CodeMonks
 
 #Goal
 To build a multi player game using greenfoot or processing tool, to teach kids different programming language consructs.
+The game has to be multiplayer. Should be dockerised and should be able to handle multiple sessions.
 
 #Name of the Game
 Pokemon Thirst
