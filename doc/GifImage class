@@ -1,0 +1,3 @@
+For using gif image for pokemon actors-
+* Import gif image class
+eg. GifImage mygif= new GifImage (" abc.gif ");
