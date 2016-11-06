@@ -1,20 +1,12 @@
 -------------------------------------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
+This folder contains source code for hurdles. The different version of source code are stored in 
+a progressive manner. 
 -------------------------------------------------------------------------------------------------------
+Project Title: Programming Pokemon
 
-PROJECT TITLE: Programming Pokemon
+Purpose Of Project: To build a game to teach children programming.
 
-PURPOSE OF PROJECT: To build a game to teach children programming.
+Version or Date: V1.0
 
-VERSION or DATE: V1.0
-
-HOW TO START THIS PROJECT: Download this folder / import in greenfoot / run
-
-AUTHORS: Nitinkumar Gove
-
-USER INSTRUCTIONS: 
-None
-
+Authors: Nitinkumar Gove
 ------------------------------------------------------------------------------------------------------
