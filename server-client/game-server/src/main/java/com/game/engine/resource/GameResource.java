@@ -41,7 +41,8 @@ public class GameResource {
     @Path("/{gameId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Game getGame(@PathParam("gameId") Long gameId) {
-        System.out.print("GameId "+ gameId);
         return gameService.getGame(gameId);
     }
+
+    //TODO: Create PUT method to update player scores
 }

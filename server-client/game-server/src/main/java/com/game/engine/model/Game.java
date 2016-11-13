@@ -1,9 +1,8 @@
 package com.game.engine.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import javax.xml.bind.annotation.XmlTransient;
+import java.util.*;
 
 /**
  * Created by Sushant on 06-11-2016.
@@ -12,18 +11,18 @@ import java.util.Map;
 public class Game {
 
     private long gameId;
-    private Map<Long, Long> playerScores;
+    private List<PlayerScore> playerScores;
     private Date date;
 
     public Game() {
         this.date = new Date();
-        this.playerScores = new HashMap<>();
+        this.playerScores = new ArrayList<>();
     }
 
     public Game(long gameId) {
         this.gameId = gameId;
         this.date = new Date();
-        this.playerScores = new HashMap<>();
+        this.playerScores = new ArrayList<>();
     }
 
     public long getGameId() {
@@ -34,12 +33,17 @@ public class Game {
         this.gameId = gameId;
     }
 
-    public Map<Long, Long> getPlayerScores() {
+    public List<PlayerScore> getPlayerScores() {
         return playerScores;
     }
 
-    public void setPlayerScores(Map<Long, Long> playerScores) {
+    public void setPlayerScores(List<PlayerScore> playerScores) {
         this.playerScores = playerScores;
+    }
+
+    public void addPlayerScores(Long playerId, Long scoreId) {
+        PlayerScore playerScore = new PlayerScore(playerId, scoreId);
+        this.playerScores.add(playerScore);
     }
 
     public Date getDate() {

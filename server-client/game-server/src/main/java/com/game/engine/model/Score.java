@@ -7,7 +7,7 @@ import java.util.Date;
  * Created by Sushant on 06-11-2016.
  */
 @XmlRootElement
-public class Score {
+public class Score implements Comparable<Score> {
     private long id;
     private long score;
     private Date date;
@@ -41,5 +41,15 @@ public class Score {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+
+    @Override
+    public int compareTo(Score o) {
+        long comparision =  this.score - o.score;
+        if (comparision == 0) {
+            comparision = this.date.compareTo(o.date);
+        }
+        return ((int) comparision);
     }
 }

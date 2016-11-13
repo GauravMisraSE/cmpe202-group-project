@@ -14,10 +14,11 @@ public class GameServiceImpl implements GameService {
     private static GameDao dao = new GameDao();
 
     public GameServiceImpl() {
-        dao.addGame(new Game());
+        Game game = new Game();
+        game.addPlayerScores(1L, 1L);
+        dao.addGame(game);
         dao.addGame(new Game());
     }
-
 
     @Override
     public Game addGame(Game game) {

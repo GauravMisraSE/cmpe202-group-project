@@ -11,7 +11,7 @@ import java.util.Map;
  * Created by Sushant on 06-11-2016.
  */
 public class PlayerDao {
-    private static Integer id = 1;
+    private static Long id = 1L;
     private static Map<String, Player> players = new HashMap<>();
 
     public PlayerDao() {
