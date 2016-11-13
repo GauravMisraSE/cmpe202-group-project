@@ -1,0 +1,5 @@
+For using gif image for pokemon actors-
+* Import gif image class
+eg. GifImage mygif= new GifImage (" abc.gif ");
+Animating a character
+https://www.youtube.com/watch?v=el5SmbU53Fc

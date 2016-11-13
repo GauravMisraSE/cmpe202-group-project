@@ -1,3 +1,13 @@
 1. http://csunplugged.org/
 https://www.toptal.com/developers/sorting-algorithms
 http://www.mundayweb.com/html/Sorting%20Alogrithm%20Animation%20System%20(SAAS).html
+
+
+2. This is how we can create an actor animation:
+https://www.youtube.com/watch?v=RdpJe6lBwJ0#t=703.344252
+
+3. Restlet:
+https://restlet.com/technical-resources/restlet-framework/guide/2.3
+
+4. AWS:
+https://aws.amazon.com/documentation/
