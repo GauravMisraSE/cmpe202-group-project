@@ -15,6 +15,7 @@ The game has to be multiplayer. Should be dockerised and should be able to handl
 
 #Name of the Game
 Pokemon Thirst
+![Game Start Screen](https://github.com/sjsu-sushant/cmpe202-group-project/blob/master/Game%20Start%20Screen.png)
 
 #Storyline
 Crazy for pokemons ? We have got a bunch of them scattered all across the field. Go catch 'em ! Develop skills and moves to protect yourself from the hurdles. Can you survive enough to catch few [ pokemons ] ? Lets See ! 
