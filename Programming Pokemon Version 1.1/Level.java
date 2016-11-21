@@ -9,7 +9,7 @@ public abstract class Level extends World
         super(800, 600, 1);
         //setBackground(new GreenfootImage("StartScreen.png")); // Splash Screen
         setFields();
-        System.out.println(map.length);
+        
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++) // Example of Iteration
         {
                 int kind = "cbpwmdksfq".indexOf(""+map[i].charAt(j));
@@ -24,7 +24,7 @@ public abstract class Level extends World
     }
 
     public void setFields() {
-        System.out.println("level set fields");
+        
     }
 
     public void nextLevel() {}

@@ -1,6 +1,6 @@
 import greenfoot.Greenfoot;
 
-public class Level01 extends Level
+public class Level02 extends Level
 {
     /** ********************      MAP LEGEND     *********************** */
     //      b = block        m = monster         f = floating platform q = wrong door
@@ -33,7 +33,7 @@ public class Level01 extends Level
 
     public void nextLevel()
     {
-        Greenfoot.setWorld(new Level02()); 
+        Greenfoot.setWorld(new Level03()); 
     }
 
     /**
