@@ -1,6 +1,6 @@
  import greenfoot.*; 
 public class Gate extends Actor
-{ //demo for change of stage
+{ 
    public void act()
    {
     Actor p = getOneIntersectingObject(MovableActor.class);
@@ -8,5 +8,6 @@ public class Gate extends Actor
     {
         Greenfoot.setWorld(new Trial());
     }
-   }
+   } 
+   //demo for change of stage
 }
