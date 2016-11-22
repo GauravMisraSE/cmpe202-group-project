@@ -15,5 +15,6 @@ public class player extends Actor
     public void act() 
     {
         // Add your action code here.
+        move(4);
     }    
 }
