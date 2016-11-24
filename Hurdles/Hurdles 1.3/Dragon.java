@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.ArrayList;
 
 /**
  * Write a description of class Dragon here.
@@ -6,10 +7,44 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Nitinkumar Gove 
  * @version V1.1
  */
-public class Dragon extends Actor
+public class Dragon extends Actor implements Hurdle
 {
     GifImage gifImage = new GifImage("aerodactyl.gif");
     int flag = 0;
+
+    // for actor purpose - temp in dragon
+    
+    private ArrayList<ScoreObserver> obs = new ArrayList<ScoreObserver>();    
+    public int score = 0 ; 
+    
+    public int getScore(){
+        return score;
+    }
+    
+    public void setScore(int s){
+        this.score += s; 
+        System.out.println("Score " + score ); 
+        notifyObservers();
+    }
+    
+    public void attach(ScoreObserver sc)
+    {
+        obs.add(sc);
+    }
+    
+    public void notifyObservers()
+    {
+       for(ScoreObserver sc : obs )
+             sc.updateScoreBoard();
+    }
+    
+    // -----------------------------------------------
+    
+     public void setAvatar()
+    {
+        setImage(gifImage.getCurrentImage());  
+    }
+    
     /**
      * Act - do whatever the Dragon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,8 +52,8 @@ public class Dragon extends Actor
     public void act() 
     {
         // Add your action code here.
-         setImage(gifImage.getCurrentImage());
-         spitFire();
+        setAvatar();
+        spitFire();
          //move();
     }    
     

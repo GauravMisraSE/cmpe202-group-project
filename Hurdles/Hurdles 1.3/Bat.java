@@ -1,27 +1,30 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Haunter here.
+ * Write a description of class Bat here.
  * 
- * @author Nitinkumar Gove
- * @version V1.1
+ * @author  - Nitinkumar Gove 
+ * @version - V1.1
  */
-public class Haunter extends Actor
+public class Bat extends Actor implements Hurdle
 {
-    
-    GifImage gifImage = new GifImage("haunter.gif");
-     int flag = 0;
+   
+    GifImage gifImage = new GifImage("golbat-f.gif");
+
     /**
-     * Act - do whatever the Haunter wants to do. This method is called whenever
+     * Act - do whatever the Bat wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    public void setAvatar()
+    {
+        setImage(gifImage.getCurrentImage());  
+    }
+    
     public void act() 
     {
-        // Add your action code here.
-        setImage(gifImage.getCurrentImage()); 
-        move();
-        // movement
-        
+        setAvatar(); 
+              
         // detect left key - and act
         if(Greenfoot.isKeyDown("left"))
         {
@@ -45,23 +48,38 @@ public class Haunter extends Actor
         {
             moveDown();
         }
-    } 
-    public void move()
-    {
-        if(getX()>100 && flag == 0)
-        {
-            setLocation(getX()-5, getY());
-            flag = 0;
-        }
-        else if(getX() < getWorld().getWidth()-100 ) 
-        {
-            setLocation(getX()+5, getY());
-            flag = 1;
-        }
-        else
-            flag = 0;       
-    }
+        
+        
+        
+    }  
     
+    // swing at a place
+    public void swing()
+    {
+        int x = getX();
+        int y = getY();
+        
+        int gotill;
+        int start;
+        
+        start = x;
+        gotill= x - 200;
+        
+        while(true)
+        {
+            if(x > gotill)
+            {
+                x = x - 10;
+                setLocation(x,y);
+            }
+            else if(x < gotill)
+            {
+                x = x + 10;
+                setLocation(x,y);
+            }
+            
+        }
+    }
     
     public void moveRight()
     {
