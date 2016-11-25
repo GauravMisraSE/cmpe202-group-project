@@ -12,7 +12,7 @@ public class Name extends World
     NameButton john, lucy, bruce, milly;
     Message m;
     
-    String variable = " Awesome ! Just the way you picked a name for you, in computer world you \n use variables to a particular memory location.";
+    String variable = " Awesome ! Just the way you picked a name for you, in computer world you \n use variables to identify a particular memory location.";
        
     public Name()
     {   
@@ -33,6 +33,8 @@ public class Name extends World
         addObject(lucy, 400, 400);
         
         addObject(m, 400, 150);
+        
+       
     }
     
     
@@ -43,6 +45,11 @@ public class Name extends World
            System.out.println("button clicked");
            m = new Message(variable, 22);
            addObject(m, 400, 500);
+        }
+        
+        if(Greenfoot.mouseClicked(this))
+        {
+            Greenfoot.setWorld(new Array());
         }
     } 
  
