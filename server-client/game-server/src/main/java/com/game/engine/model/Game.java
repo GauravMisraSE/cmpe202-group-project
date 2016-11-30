@@ -41,11 +41,6 @@ public class Game {
         this.playerScores = playerScores;
     }
 
-    public void addPlayerScores(String playerId, Long scoreId) {
-        PlayerScore playerScore = new PlayerScore(playerId, scoreId);
-        this.playerScores.add(playerScore);
-    }
-
     public Date getDate() {
         return date;
     }

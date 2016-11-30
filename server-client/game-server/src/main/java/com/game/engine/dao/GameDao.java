@@ -1,6 +1,7 @@
 package com.game.engine.dao;
 
 import com.game.engine.model.Game;
+import com.game.engine.model.GamePlayerScore;
 import com.game.engine.model.PlayerScore;
 
 import java.util.ArrayList;
@@ -34,9 +35,25 @@ public class GameDao {
         Game game = games.get(gameId);
         if (game!= null) {
             List<PlayerScore> playerScores = game.getPlayerScores();
-            PlayerScore newPlayerScore = new PlayerScore(playerId, 0L);
+            PlayerScore newPlayerScore = new PlayerScore(playerId, 0);
             playerScores.add(newPlayerScore);
         }
         return game;
     }
+
+    public Game updatePlayerScore(GamePlayerScore gamePlayerScore) {
+        Game game = games.get(gamePlayerScore.getGameId());
+        if (game!= null) {
+            List<PlayerScore> playerScores = game.getPlayerScores();
+            for (PlayerScore playerScore : playerScores) {
+                if (gamePlayerScore.getPlayerScore().getPlayerId().equals(playerScore.getPlayerId())) {
+                    playerScore.setScore(gamePlayerScore.getPlayerScore().getScore());
+                    return game;
+                }
+            }
+        }
+        return game;
+    }
+
+
 }

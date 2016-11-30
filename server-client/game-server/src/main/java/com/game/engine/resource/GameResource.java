@@ -2,6 +2,7 @@ package com.game.engine.resource;
 
 import com.game.engine.model.Game;
 import com.game.engine.model.GamePlayer;
+import com.game.engine.model.GamePlayerScore;
 import com.game.engine.model.Player;
 import com.game.engine.service.GameService;
 import com.game.engine.service.impl.GameServiceImpl;
@@ -59,5 +60,15 @@ public class GameResource {
         return gameService.getGame(gameId);
     }
 
-    //TODO: Create PUT method to update player scores
+    @PUT
+    @Path("/updateScore")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updatePlayerScore(GamePlayerScore gamePlayerScore, @Context UriInfo uriInfo) {
+        Game game = gameService.updatePlayerScore(gamePlayerScore);
+        URI uri = uriInfo.getAbsolutePathBuilder().path(String.valueOf(game.getGameId())).build();
+        return Response.ok(uri)
+                .entity(game)
+                .build();
+    }
 }

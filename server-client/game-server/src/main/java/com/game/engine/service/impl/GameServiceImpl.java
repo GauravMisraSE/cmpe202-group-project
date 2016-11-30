@@ -2,6 +2,7 @@ package com.game.engine.service.impl;
 
 import com.game.engine.dao.GameDao;
 import com.game.engine.model.Game;
+import com.game.engine.model.GamePlayerScore;
 import com.game.engine.service.GameService;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public class GameServiceImpl implements GameService {
 
     public GameServiceImpl() {
         Game game = new Game();
-        game.addPlayerScores("Sushant", 1L);
+        //game.addPlayerScores("Sushant", 1L);
         dao.addGame(game);
         dao.addGame(new Game());
     }
@@ -39,6 +40,11 @@ public class GameServiceImpl implements GameService {
     @Override
     public Game addPlayerToGame(long gameId, String playerId) {
         return dao.addPlayerToGame(gameId, playerId);
+    }
+
+    @Override
+    public Game updatePlayerScore(GamePlayerScore gamePlayerScore) {
+        return dao.updatePlayerScore(gamePlayerScore);
     }
 
 
