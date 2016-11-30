@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Service
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Service\ here.\ \r\n\ @author\ Nitinkumar\ Gove\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=Service()
+comment2.params=
+comment2.target=Service\ getInstance()
+comment3.params=
+comment3.target=long\ createGame()
+comment4.params=gameId\ name
+comment4.target=java.lang.String\ addPlayer(long,\ java.lang.String)
+comment5.params=score
+comment5.target=void\ updateScore(int)
+comment6.params=
+comment6.target=java.util.ArrayList\ getAvailableGames()
+numComments=7
