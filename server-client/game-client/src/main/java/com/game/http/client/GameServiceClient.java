@@ -1,6 +1,7 @@
 package com.game.http.client;
 
 import com.game.engine.model.Game;
+import com.game.engine.model.GamePlayer;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
@@ -36,6 +37,15 @@ public class GameServiceClient extends HttpClient {
     public Response postGame(Game game) {
         Entity<Game> gameEntity = Entity.json(game);
         Response postResponse = customTarget
+                .request(MediaType.APPLICATION_JSON)
+                .post(gameEntity);
+        return postResponse;
+    }
+
+    public Response addPlayerToGame(GamePlayer gamePlayer) {
+        Entity gameEntity = Entity.json(gamePlayer);
+        Response postResponse = customTarget
+                .path("addPlayer")
                 .request(MediaType.APPLICATION_JSON)
                 .post(gameEntity);
         return postResponse;

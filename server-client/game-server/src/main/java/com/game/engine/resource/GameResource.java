@@ -1,8 +1,11 @@
 package com.game.engine.resource;
 
 import com.game.engine.model.Game;
+import com.game.engine.model.GamePlayer;
+import com.game.engine.model.Player;
 import com.game.engine.service.GameService;
 import com.game.engine.service.impl.GameServiceImpl;
+import com.sun.deploy.util.StringUtils;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -28,6 +31,18 @@ public class GameResource {
         URI uri = uriInfo.getAbsolutePathBuilder().path(newGameId).build();
         return Response.created(uri)  // created() sets status code to 201 and returns uri in the response header
                 .entity(newGame)
+                .build();
+    }
+
+    @POST
+    @Path("/addPlayer")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response addPlayerToGame(GamePlayer gamePlayer, @Context UriInfo uriInfo) {
+        Game game = gameService.addPlayerToGame(gamePlayer.getGameId(), gamePlayer.getPlayerId());
+        URI uri = uriInfo.getAbsolutePathBuilder().path(String.valueOf(game.getGameId())).build();
+        return Response.created(uri)
+                .entity(game)
                 .build();
     }
 

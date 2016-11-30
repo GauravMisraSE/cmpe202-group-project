@@ -11,7 +11,7 @@ import java.net.URI;
  * Created by Sushant on 06-11-2016.
  */
 public class GameEngine {
-    private static final String BASE_URI = "http://localhost:8080/engine/";
+    private static final String BASE_URI = "http://10.250.109.180:8080/engine/";
 
     public static HttpServer startServer() {
         final ResourceConfig rc = new ResourceConfig().packages("com.game.engine");

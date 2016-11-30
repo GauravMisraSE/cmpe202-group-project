@@ -15,7 +15,7 @@ public class GameServiceImpl implements GameService {
 
     public GameServiceImpl() {
         Game game = new Game();
-        game.addPlayerScores(1L, 1L);
+        game.addPlayerScores("Sushant", 1L);
         dao.addGame(game);
         dao.addGame(new Game());
     }
@@ -35,4 +35,11 @@ public class GameServiceImpl implements GameService {
     public Game getGame(long gameId) {
         return dao.getGame(gameId);
     }
+
+    @Override
+    public Game addPlayerToGame(long gameId, String playerId) {
+        return dao.addPlayerToGame(gameId, playerId);
+    }
+
+
 }

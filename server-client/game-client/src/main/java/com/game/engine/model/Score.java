@@ -7,7 +7,7 @@ import java.util.Date;
  * Created by Sushant on 06-11-2016.
  */
 @XmlRootElement
-public class Score implements Comparable<Score> {
+public class Score implements Comparable<com.game.engine.model.Score> {
     private long id;
     private long score;
     private Date date;
@@ -45,7 +45,7 @@ public class Score implements Comparable<Score> {
 
 
     @Override
-    public int compareTo(Score o) {
+    public int compareTo(com.game.engine.model.Score o) {
         long comparision =  this.score - o.score;
         if (comparision == 0) {
             comparision = this.date.compareTo(o.date);

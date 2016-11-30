@@ -15,4 +15,6 @@ public interface GameService {
 
     Game getGame(long gameId);
 
+    Game addPlayerToGame(long gameId, String playerId);
+
 }

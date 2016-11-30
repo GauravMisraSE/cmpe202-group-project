@@ -1,6 +1,7 @@
 package com.game.engine.dao;
 
 import com.game.engine.model.Game;
+import com.game.engine.model.PlayerScore;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,5 +28,15 @@ public class GameDao {
 
     public List<Game> getGames() {
         return new ArrayList<>(games.values());
+    }
+
+    public Game addPlayerToGame(long gameId, String playerId) {
+        Game game = games.get(gameId);
+        if (game!= null) {
+            List<PlayerScore> playerScores = game.getPlayerScores();
+            PlayerScore newPlayerScore = new PlayerScore(playerId, 0L);
+            playerScores.add(newPlayerScore);
+        }
+        return game;
     }
 }

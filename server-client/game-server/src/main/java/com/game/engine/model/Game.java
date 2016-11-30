@@ -41,7 +41,7 @@ public class Game {
         this.playerScores = playerScores;
     }
 
-    public void addPlayerScores(Long playerId, Long scoreId) {
+    public void addPlayerScores(String playerId, Long scoreId) {
         PlayerScore playerScore = new PlayerScore(playerId, scoreId);
         this.playerScores.add(playerScore);
     }

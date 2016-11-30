@@ -7,21 +7,21 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class PlayerScore {
-    private Long playerId;
+    private String playerId;
     private Long scoreId;
 
     public PlayerScore() {}
 
-    public PlayerScore(Long playerId, Long scoreId) {
+    public PlayerScore(String playerId, Long scoreId) {
         this.scoreId = scoreId;
         this.playerId = playerId;
     }
 
-    public Long getPlayerId() {
+    public String getPlayerId() {
         return playerId;
     }
 
-    public void setPlayerId(Long playerId) {
+    public void setPlayerId(String playerId) {
         this.playerId = playerId;
     }
 
@@ -31,5 +31,13 @@ public class PlayerScore {
 
     public void setScoreId(Long scoreId) {
         this.scoreId = scoreId;
+    }
+
+    @Override
+    public String toString() {
+        return "PlayerScore{" +
+                "playerId='" + playerId + '\'' +
+                ", scoreId=" + scoreId +
+                '}';
     }
 }
