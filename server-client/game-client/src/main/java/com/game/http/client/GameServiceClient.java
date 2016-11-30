@@ -2,6 +2,7 @@ package com.game.http.client;
 
 import com.game.engine.model.Game;
 import com.game.engine.model.GamePlayer;
+import com.game.engine.model.GamePlayerScore;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
@@ -49,5 +50,14 @@ public class GameServiceClient extends HttpClient {
                 .request(MediaType.APPLICATION_JSON)
                 .post(gameEntity);
         return postResponse;
+    }
+
+    public Response updatePlayerScore(GamePlayerScore gamePlayerScore) {
+        Entity gamePlayerScoreEntity = Entity.json(gamePlayerScore);
+        Response putResponse = customTarget
+                .path("updateScore")
+                .request(MediaType.APPLICATION_JSON)
+                .put(gamePlayerScoreEntity);
+        return putResponse;
     }
 }

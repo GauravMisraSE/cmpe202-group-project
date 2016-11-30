@@ -12,7 +12,7 @@ import java.util.List;
 public class Game {
 
     private long gameId;
-    private List<com.game.engine.model.PlayerScore> playerScores;
+    private List<PlayerScore> playerScores;
     private Date date;
 
     public Game() {
@@ -34,17 +34,12 @@ public class Game {
         this.gameId = gameId;
     }
 
-    public List<com.game.engine.model.PlayerScore> getPlayerScores() {
+    public List<PlayerScore> getPlayerScores() {
         return playerScores;
     }
 
-    public void setPlayerScores(List<com.game.engine.model.PlayerScore> playerScores) {
+    public void setPlayerScores(List<PlayerScore> playerScores) {
         this.playerScores = playerScores;
-    }
-
-    public void addPlayerScores(String playerId, Long scoreId) {
-        com.game.engine.model.PlayerScore playerScore = new PlayerScore(playerId, scoreId);
-        this.playerScores.add(playerScore);
     }
 
     public Date getDate() {
