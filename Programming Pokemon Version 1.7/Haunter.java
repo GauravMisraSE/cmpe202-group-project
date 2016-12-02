@@ -22,7 +22,7 @@ public class Haunter extends Actor implements Hurdle
      */
     public void act() 
     {
-        // Add your action code here.
+        
         setAvatar();
         move();
         // movement
