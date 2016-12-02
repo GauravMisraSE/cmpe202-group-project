@@ -3,7 +3,6 @@ package com.game.engine.resource;
 import com.game.engine.model.Score;
 import com.game.engine.service.ScoreService;
 import com.game.engine.service.impl.ScoreServiceImpl;
-import com.sun.xml.internal.ws.message.ByteArrayAttachment;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

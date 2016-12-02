@@ -3,18 +3,20 @@ package com.game.engine.model;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Created by Sushant on 11-11-2016.
+ * Created by Sushant on 29-11-2016.
  */
 @XmlRootElement
-public class PlayerScore {
+public class GamePlayer {
+
     private String playerId;
-    private int score;
+    private long gameId;
 
-    public PlayerScore() {}
+    public GamePlayer() {
+    }
 
-    public PlayerScore(String playerId, int score) {
+    public GamePlayer(String playerId, long gameId) {
         this.playerId = playerId;
-        this.score = score;
+        this.gameId = gameId;
     }
 
     public String getPlayerId() {
@@ -25,11 +27,11 @@ public class PlayerScore {
         this.playerId = playerId;
     }
 
-    public int getScore() {
-        return score;
+    public long getGameId() {
+        return gameId;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void setGameId(long gameId) {
+        this.gameId = gameId;
     }
 }
