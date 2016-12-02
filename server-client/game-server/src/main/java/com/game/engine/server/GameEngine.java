@@ -26,6 +26,7 @@ public class GameEngine {
     }
 
     public static void main(String[] args) throws IOException {
+        int input = 0;
         HttpServer server =null;
         try {
             GameEngine application = new GameEngine();
@@ -34,10 +35,10 @@ public class GameEngine {
             System.out.println(String.format("Jersey app started with WADL available at "
                     + "%sapplication.wadl\nHit enter to stop it...", uri));
             System.out.println("Will shut down");
-            System.in.read();
-            System.in.read();
-            System.in.read();
-
+            while (input <= 0) {
+                input = System.in.read();
+            }
+            System.out.println("Pressed "+ input);
         } catch (IOException io) {
             //TODO log
         } finally {
