@@ -21,7 +21,8 @@ Pokemon Thirst
 Crazy for pokemons ? We have got a bunch of them scattered all across the field. Go catch 'em ! Develop skills and moves to protect yourself from the hurdles. Can you survive enough to catch few [ pokemons ] ? Lets See ! 
 
 #Release History
-1. Version 1.0 - Under Development
+1. Version 1.0 - Single Player Ready
+2. Version 1.1 - Multi player game - under development
 
 #Branch Details
 1. Branch 1 [master] - all the final code commits and other updates
